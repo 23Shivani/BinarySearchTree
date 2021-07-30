@@ -22,4 +22,11 @@ public class BinarySearchTree {
 		}
 		return root;
 	}
+	public int getSize() {
+		return this.getSizeRecursively(root);
+	}
+	private int getSizeRecursively(MyBinaryNode root) {
+		
+		return root == null ? 0 : 1 + this.getSizeRecursively(root.left) + this.getSizeRecursively(root.right);
+	}
 }
